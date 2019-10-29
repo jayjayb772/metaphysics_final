@@ -12,6 +12,7 @@ def changeColor():
    red=data['red']
    blue=data['blue']
    green=data['green']
+   neopixel.setColor(red,blue,green)
 
 
 if __name__ == '__main__':
