@@ -1,4 +1,8 @@
 from flask import Flask, render_template, redirect, url_for, request, jsonify, json
+import board
+import neopixel
+numPixels = 10
+pixels = neopixel.NeoPixel(board.D18, numPixels)
 
 app = Flask(__name__)
 
@@ -12,8 +16,8 @@ def changeColor():
    red=data['red']
    blue=data['blue']
    green=data['green']
-   neopixel.setColor(red,blue,green)
+   pixels.fill((red,green,blue))
 
 
 if __name__ == '__main__':
-   app.run(host=0.0.0.0)
+   app.run(host='0.0.0.0')
