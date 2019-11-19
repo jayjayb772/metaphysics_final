@@ -17,9 +17,7 @@ def clear():
     mylcd.lcd_clear()
 
 degSymb = [0b01100,0b10010,0b10010,0b01100,0b00000,0b00000,0b00000,0b00000]
-
-
-
+mylcd.lcd_load_custom_font(degSymb)
 
 
 def simpleDelay(str,line,delay):
